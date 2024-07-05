@@ -3,20 +3,31 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   grid-area: header;
-
-  height: 105px;
   width: 100%;
+  padding: 0 123px;
 
-  border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
+  border-bottom: 1px solid #3E3B47;
 
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 0 80px;
+  gap: 64px;
+
+  > h2 {
+    color: ${({ theme }) => theme.COLORS.PINK};
+    font-size: 24px;
+    font-size: 700;
+  }
+`;
+
+export const Form = styled.form`
+  flex: 1;
 `;
 
 export const Profile = styled(Link)`
   display: flex;
   align-items: center;
+  gap: 8px;
   color: ${({ theme }) => theme.COLORS.WHITE};
 
   > img {
@@ -28,27 +39,17 @@ export const Profile = styled(Link)`
   > div {
     display: flex;
     flex-direction: column;
-    margin-left: 16px;
     line-height: 24px;
+    text-align: end;
 
     span {
       font-size: 14px;
-      color: ${({ theme }) => theme.COLORS.GRAY_100};
+      color: ${({ theme }) => theme.COLORS.GRAY_200};
     }
 
     strong {
-      font-size: 18px;
-      columns: ${({ theme }) => theme.COLORS.WHITE};
+      font-size: 14px;
+      columns: ${({ theme }) => theme.COLORS.GRAY_100};
     }
-  }
-`;
-
-export const Logout = styled.button`
-  border: none;
-  background: none;
-  
-  > svg {
-    color: ${({ theme }) => theme.COLORS.GRAY_100};
-    font-size: 24px;
   }
 `;

@@ -6,48 +6,13 @@ export const Container = styled.div`
   height: 100vh;
   display: grid;
   padding: .5rem;
-  grid-template-columns: 250px auto;
-  grid-template-rows: 105px 128px auto 64px;
+  grid-template-rows: 116px auto 64px;
   grid-template-areas: 
-  "brand header"
-  "menu search"
-  "menu content"
-  "newnote content";
+  "header"
+  "content"
+  "newnote";
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-`;
-
-export const Brand = styled.div`
-  grid-area: brand;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-  border-radius: 10px 10px 0 0;
-
-  h1 {
-    font-size: 24px;
-    color: orange;
-  }
-`;
-
-export const Menu = styled.ul`
-  grid-area: menu;
-
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-  padding-top: 64px;
-  text-align: center;
-
-  > li {
-    margin-bottom: 25px;
-  }
-`;
-
-export const Search = styled.div`
-  grid-area: search;
-  padding: 64px 64px 0;
 `;
 
 export const Content = styled.div`
