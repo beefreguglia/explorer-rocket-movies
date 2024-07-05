@@ -1,3 +1,4 @@
+import { Stars } from "../Stars";
 import { Tag } from "../Tag";
 import { Container } from "./styles";
 
@@ -9,14 +10,21 @@ interface Tag {
 interface NoteProps {
   data: {
     title: string;
+    rating: number;
     tags: Tag[];
+    description: string;
   }
 }
 
-export function Note({ data, ...rest }: NoteProps) {
+export function Note({ 
+  data,
+  ...rest 
+}: NoteProps) {
   return(
     <Container {...rest}>
       <h1>{data.title}</h1>
+      <Stars rating={data.rating} />
+      <p>{data.description}</p>
       {data.tags && (
         <footer>
           {data.tags.map((tag)  => (
