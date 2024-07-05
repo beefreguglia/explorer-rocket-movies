@@ -32,4 +32,13 @@ export default createGlobalStyle`
   button:hover, a:hover {
     filter: brightness(0.9);
   }
+
+  .flex {
+    display: flex;
+    gap: 40px;
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
 `;

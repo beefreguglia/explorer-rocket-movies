@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.button`
   width: 100%;
-  background-color: ${({ theme }) => theme.COLORS.PINK};
-  color: ${({ theme }) => theme.BACKGROUND_800};
 
   border: 0;
   padding: 14px 32px;
@@ -14,5 +12,15 @@ export const Container = styled.button`
   &:disabled {
     cursor: not-allowed;
     opacity: 0.8;
+  }
+
+  &.btn-primary {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+  }
+
+  &.btn-secondary {
+    background-color: #0D0C0F;
+    color: ${({ theme }) => theme.COLORS.PINK};
   }
 `;

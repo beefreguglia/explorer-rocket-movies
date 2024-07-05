@@ -6,28 +6,20 @@ export const Container = styled.div<{ $isnew: string }>`
 
   background-color: ${({ theme, $isnew }) => $isnew === 'true' 
     ? 'transparent' 
-    : theme.COLORS.BACKGROUND_900 
+    : theme.COLORS.BACKGROUND_700 
   };
-  color: ${({ theme }) =>  theme.COLORS.GRAY_300};
+  color: ${({ theme, $isnew }) => $isnew ? theme.COLORS.GRAY_200 : '#FFFFFF'};
   border: ${({ theme, $isnew }) => $isnew === 'true' 
-    ? `1px dashed ${theme.COLORS.GRAY_300}` 
+    ? `1px dashed ${theme.COLORS.GRAY_200}` 
     : 'none'
   };
-  margin-bottom: 8px;
   border-radius: 10px;
   padding-right: 16px;
 
   > button {
     border: none;
     background: none;
-  }
-
-  .button-delete {
-    color: ${({ theme }) => theme.COLORS.RED};
-  }
-
-  .button-add {
-    color: ${({ theme }) => theme.COLORS.ORANGE};
+    color: ${({ theme }) => theme.COLORS.PINK};
   }
 
   > input {

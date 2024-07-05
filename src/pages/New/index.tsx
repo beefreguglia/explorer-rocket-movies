@@ -6,6 +6,7 @@ import { NoteItem } from "../../components/NoteItem";
 import { Section } from "../../components/Section";
 import { TextArea } from "../../components/Textarea";
 import { Container, Form } from "./styles";
+import { FiArrowLeft } from "react-icons/fi";
 
 export function New() {
   return(
@@ -14,24 +15,38 @@ export function New() {
       <main>
         <Form>
           <header>
-            <h1>Criar nota</h1>
-            <Link to="/">voltar</Link>
+            <Link to="/">
+              <FiArrowLeft />
+              <p>Voltar</p>
+            </Link>
+            <h1>Novo filme</h1>
           </header>
-          <Input 
-            placeholder="Título"
-          />
+          <div className="flex">
+            <Input 
+              placeholder="Título"
+              className="flex-1"
+            />
+            <Input 
+              placeholder="Sua nota (de 0 a 5)"
+              className="flex-1"
+            />
+          </div>
           <TextArea placeholder="Observações"></TextArea>
-          <Section title="Link úteis">
-            <NoteItem value="http://rocketseat.com.br" />
-            <NoteItem isNew placeholder="Novo Link" />
-          </Section>
           <Section title="Marcadores">
             <div className="tags">
-              <NoteItem value="react" />
-              <NoteItem isNew placeholder="Nova tag" />
+              <NoteItem value="React" />
+              <NoteItem isNew placeholder="Novo Marcador" />
             </div>
           </Section>
-          <Button>Salvar</Button>
+          <div className="flex">
+            <Button 
+              variant="secondary" 
+              type="button"
+            >
+              Excluir filme
+            </Button>
+            <Button>Salvar</Button>
+          </div>
         </Form>
       </main>
     </Container>
