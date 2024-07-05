@@ -8,7 +8,10 @@ export function Profile() {
   return(
     <Container>
       <header>
-        <Link to="/"><FiArrowLeft /></Link>
+        <Link to="/">
+          <FiArrowLeft />
+          <p>Voltar</p>
+        </Link>
       </header>
       <Form>
         <Avatar>
