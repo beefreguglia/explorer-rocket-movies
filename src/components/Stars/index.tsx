@@ -2,7 +2,8 @@ import { RiStarSFill, RiStarSLine } from "react-icons/ri";
 import { Container } from "./styles";
 
 interface StarsProps {
-  rating: number
+  rating: number,
+  size?: 'sm' | 'md'
 }
 
 function handleStarsArray(rating: number): string[] {
@@ -17,11 +18,14 @@ function handleStarsArray(rating: number): string[] {
   return stars as string[];
 }
 
-export function Stars({ rating }: StarsProps) {
+export function Stars({ 
+  rating,
+  size = 'sm'
+}: StarsProps) {
   const stars = handleStarsArray(rating);
   
   return(
-    <Container>
+    <Container $size={size}>
       {stars.map((star, index) => star === 'filled-star' ? (
         <RiStarSFill key={`filled-stars-${index}`} />
       ): (

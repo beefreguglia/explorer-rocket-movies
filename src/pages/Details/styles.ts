@@ -17,38 +17,64 @@ export const Container = styled.div`
   }
 `;
 
-export const Links = styled.ul`
-  list-style: none;
-
-  > li {
-    margin-top: 12px;
-
-    a {
-      color: ${({ theme }) => theme.COLORS.WHITE};
-    }
-  }
-`
-
 export const Content = styled.div`
-  max-width: 550px;
-  margin: 0 auto;
-
   display: flex;
   flex-direction: column;
-
-  > button:first-child {
-    align-self: flex-end;
+  padding: 0 124px;
+  
+  > a:first-child {
+    align-self: flex-start;
+    color: ${({ theme }) => theme.COLORS.PINK};
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
-  > h1 {
-    font-size: 36px;
-    font-weight: 500;
-    padding-top: 64px;
+  > header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 24px;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 500;
+      columns: ${({ theme }) => theme.COLORS.WHITE};
+    }
   }
 
-  p {
+  > p {
     font-size: 16px;
-    margin-top: 16px;
+    margin-top: 40px;
     text-align: justify;
   }
+`;
+
+export const Info = styled.div`
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+      color: ${({ theme }) => theme.COLORS.PINK};
+    }
+  }
+`;
+
+export const Avatar = styled.div`
+  > img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+`;
+
+export const Tags = styled.div`
+  margin-top: 40px;
 `;
